@@ -1,0 +1,33 @@
+version: '2'
+services:
+  rhasspy:
+    image: synesthesiam/rhasspy-server:latest
+    volumes:
+      - ./rhasspy/profiles:/profiles
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "12101:12101"
+    command: --profile en --user-profiles /profiles
+  hass:
+    image: homeassistant/home-assistant
+    volumes:
+      - ./home-assistant/config:/config
+    ports:
+      - "8123:8123"
+  mosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+    ports:
+      - "8883:8883"
+  nodered:
+    image: nodered/node-red
+    volumes:
+      - ./node-red/data:/data
+    ports:
+      - "1880:1880"
+  esphome:
+    image: esphome/esphome
+    ports:
+      - "6052:6052"

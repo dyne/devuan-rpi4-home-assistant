@@ -1,0 +1,45 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Black Room
+  # Location required to calculate the time the sun rises and sets
+  latitude: 0
+  longitude: 0
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Rome
+  # Customization file
+  #customize:
+
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
+      api_password: blackroom-secret
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+logger:
+
+lovelace:
+  mode: yaml
+
+intent_script:
+
+mqtt:
+    broker: mosquitto
+    port: 8883
+
+snips:
+
+group:
+automation:
+script:
