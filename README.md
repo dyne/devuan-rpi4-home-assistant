@@ -11,4 +11,4 @@ We use the Devuan GNU/Linux distro version 3.1 (Beowulf) based on images found o
 
 To run the hass setup we use Docker and Docker-Compose images distributed by upstream developers, for practicality. This may change in the future into a fully native setup if needed.
 
-This setup is used for speculative design experiments in cooperation with the School Art, Design and Architecture at Plymouth University.
+This setup is used for speculative design experiments in cooperation with Gianni Corino of [i-DAT](https://i-DAT.org) (Plymouth University) and supported by the [SWCTN Data Fellowship](https://www.swctn.org.uk/data/).
